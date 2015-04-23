@@ -25,7 +25,8 @@ body {
 */
 h1, h2, h3, h3, h4, h5, h6, p, li {
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.45; }
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.5; }
 
 h1 {
   font-size: 4em; }
@@ -36,7 +37,7 @@ h2 {
 h3 {
   font-size: 2em; }
 
-h4, h5, h6 {
+h4, h5, h6, p {
   font-size: 1em; }
 
 h6 {
@@ -45,6 +46,9 @@ h6 {
 a {
   text-decoration: none;
   color: #href; }
+
+p {
+  color: rgba(0, 0, 0, 0.57); }
 
 .subtext {
   color: rgba(0, 0, 0, 0.57); }
@@ -60,26 +64,32 @@ a {
 	---------------- COLOR THEMES ----------------- 
 	----------------------------------------------- 
 */
-.blue h3 {
+.blue h3, .blue a {
   color: #22638F; }
 .blue .project-header {
   background: #3498DB; }
   .blue .project-header .header-detail {
     color: #22638F; }
+.blue .project-brief {
+  border-left: 5px solid #22638F; }
 
-.purple h3 {
+.purple h3, .purple a {
   color: #714185; }
 .purple .project-header {
   background: #9B59B6; }
   .purple .project-header .header-detail {
     color: #714185; }
+.purple .project-brief {
+  border-left: 5px solid #714185; }
 
-.green h3 {
+.green h3, .green a {
   color: #138A72; }
 .green .project-header {
   background: #1ABC9C; }
   .green .project-header .header-detail {
     color: #138A72; }
+.green .project-brief {
+  border-left: 5px solid #138A72; }
 
 /*  
 	----------------------------------------------- 
@@ -119,44 +129,46 @@ nav {
       nav ul li a:hover {
         cursor: pointer;
         color: rgba(0, 0, 0, 0.87);
-        transition: .5s; }
+        transition: .5s;
+        text-decoration: underline; }
 
 /*  
 	----------------------------------------------- 
 	-------------------- ARTICLE ------------------ 
 	----------------------------------------------- 
 */
-article .linked-list {
-  list-style: none; }
-  article .linked-list li {
-    color: #00a0dd;
-    cursor: pointer;
-    text-align: center;
-    z-index: 100;
-    position: relative; }
-    article .linked-list li h3:hover {
+article section {
+  margin-bottom: 100px; }
+  article section h3 {
+    margin-bottom: 0.5rem; }
+  article section h6 {
+    color: rgba(0, 0, 0, 0.57); }
+  article section .project-snapshot {
+    width: 61%;
+    margin: 0 auto; }
+    article section .project-snapshot img {
+      width: 100%; }
+  article section .project-brief {
+    padding-left: 20px; }
+    article section .project-brief a:hover {
       text-decoration: underline; }
-  article .linked-list .projectType-label {
-    text-align: center;
-    color: rgba(0, 0, 0, 0.57);
-    margin-bottom: 10px;
-    margin-top: 40px; }
-  article .linked-list .projectType-label:nth-child(1) {
-    margin-top: 0; }
+article .work-samples {
+  text-align: center;
+  margin-top: 50px; }
 
 .project-details {
-  display: none;
   padding-bottom: 60px; }
+  .project-details h3 {
+    text-align: center; }
+  .project-details h5 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.57); }
   .project-details .project-header {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
-    width: 100%;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform .5s;
-    -webkit-transform: perspective(60px) rotateX(-90deg);
-    -webkit-transform-origin: top; }
+    width: 100%; }
     .project-details .project-header .wrapper {
       max-width: 600px; }
     .project-details .project-header .row {

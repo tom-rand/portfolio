@@ -9,19 +9,11 @@ function setFooterDimentions() {
 	$('.backTo-footer').css('width', window.innerWidth - 40 + 'px');
 }
 
-// Set the padding-top of the project header based on the body position
-function setProjectHeaderPadding() {
-	var bodyPosition = $('body').offset().top;
-	$('.project-header').css('padding-top', bodyPosition * 3);
-	$('.project-details').css('padding-top', bodyPosition * 3);
-}
 
 // What happens when the user resizes the browser...
 function onResizeEvent() {
 	$(window).resize(function() {
 		setHTMLDimentions();
-		setProjectHeaderPadding();
-		// setFooterDimentions();
 	})
 }
 
@@ -75,13 +67,12 @@ $(function initialize() {
 
 	// Initialize Click Event Listeners
 	selectProjectEvent();
-	selectBackToProjectEvent();
 	selectCloseIconEvent();
 	selectMenuIconEvent();
 
 	// Initialize Dimention Setters
 	setHTMLDimentions();
-	setProjectHeaderPadding();
+
 	
 	
 
