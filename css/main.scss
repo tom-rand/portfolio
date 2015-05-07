@@ -162,7 +162,6 @@ p {
 header {
 	padding-bottom: 40px;
 	margin-bottom: 40px;
-	border-bottom: 1px solid #DEDEDE;
 	position: relative;
 
 	p {
@@ -171,6 +170,7 @@ header {
 
 	p:first-child {
 		margin-bottom: 5px;
+		color: $primaryBlack;
 	}
 
 	.menu {

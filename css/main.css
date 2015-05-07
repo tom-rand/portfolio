@@ -99,12 +99,12 @@ p {
 header {
   padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #DEDEDE;
   position: relative; }
   header p {
     margin: 0; }
   header p:first-child {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.87); }
   header .menu {
     position: absolute;
     top: 4px;
