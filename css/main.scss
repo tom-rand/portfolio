@@ -42,7 +42,7 @@ $greenFont: #138A72;
 
 
 h1, h2, h3, h3, h4, h5, h6, p, li {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: $primaryBlack;
 
 	// FlowType Setting
@@ -61,12 +61,14 @@ h2 {
 
 h3 {
 	// FlowType Setting
-	font-size: 2em;
+	font-size: 1.5em;
+	font-weight: 400;
 }
 
 h4, h5, h6, p {
 	// FlowType Setting
 	font-size: 1em;
+	font-weight: 300;
 }
 
 h5 {
@@ -74,16 +76,16 @@ h5 {
 }
 
 h6 {
-	font-weight: 700;
+		
 }
 
 a {
 	text-decoration: none;
-	color: #href;
+	color: $href;
 }
 
 p {
-	color: $secondaryBlack;
+	color: $primaryBlack;
 }
 
 .subtext {
@@ -95,6 +97,21 @@ p {
 	color: $secondaryBlack;
 	font-style: italic;
 	font-size: 12px;
+}
+
+.logo {
+	font-weight: 600;
+	a {
+		color: $primaryBlack; 	
+
+	}
+}
+
+.section-label {
+	margin-bottom: 5px;
+	margin-top: 20px;
+	font-size: .75em;
+	color: $secondaryBlack;
 }
 
 /*  
@@ -115,7 +132,7 @@ p {
 	}
 
 	.project-brief {
-		border-left: 5px solid $blueFont;
+	
 	}
 }
 
@@ -130,7 +147,7 @@ p {
 		}	
 	}
 	.project-brief {
-		border-left: 5px solid $purpleFont;
+
 	}
 }
 
@@ -145,7 +162,7 @@ p {
 		}	
 	}
 	.project-brief {
-		border-left: 5px solid $greenFont;
+		
 	}
 }
 
@@ -160,8 +177,7 @@ p {
 
 
 header {
-	padding-bottom: 40px;
-	margin-bottom: 40px;
+	padding-bottom: 20px;
 	position: relative;
 
 	p {
@@ -226,8 +242,9 @@ nav {
 article {
 
 	section {
-
-		margin-bottom: 100px;
+		border-top: 1px solid #EDEDED;
+		padding-top: 20px;
+		padding-bottom: 20px;
 
 		h3 {
 			margin-bottom: 0.5rem;
@@ -238,8 +255,9 @@ article {
 		}
 
 		.project-snapshot {
-			width: 61%;
-			margin: 0 auto;			
+			width: 25%;
+			margin: 0 auto;
+			float: left;			
 
 			img {
 				width: 100%;	
@@ -250,6 +268,8 @@ article {
 
 		.project-brief {
 			padding-left: 20px;	
+			float: right;
+			width: 66%;
 
 			a:hover {
 				text-decoration: underline;
@@ -277,6 +297,10 @@ article {
 		text-align: center;
 		color: $secondaryBlack;
 
+	}
+
+	h6 {
+		font-weight: 600;
 	}
 
 	.project-header {
@@ -388,51 +412,17 @@ article {
 
 }
 
+.footer {
+	margin-bottom: 20px;
 
-/*  
-	----------------------------------------------- 
-	----------------- MENU OVERLAY ---------------- 
-	----------------------------------------------- 
-*/
-
-#menu-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-	background: rgba(0,0,0,.9);
-	display: none;
-
-	section {
-		margin-bottom: 75px;
-		
-		h6 {
-			color: rgba(255,255,255,.5);
-			text-align: center;
-
-		}
-
-		li {
-			padding: 25px 0;
-			list-style: none;
-			text-align: center;
-			font-size: 18px;
-			margin-bottom: 0;
-			cursor: pointer;
-
-			a {
-				color: #ffffff;
-			}
-
-			a:hover {
-				color: $href;
-			}
-		}
-
+	p {
+		font-size: .75em;
+		color: $secondaryBlack;
 	}
 }
+
+
+
 
 
 
