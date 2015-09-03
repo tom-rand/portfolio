@@ -82,6 +82,10 @@ a {
 	color: $href;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
 p {
 	color: $primaryBlack;
 }

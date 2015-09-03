@@ -44,6 +44,9 @@ a {
   text-decoration: none;
   color: #00a0dd; }
 
+a:hover {
+  text-decoration: underline; }
+
 p {
   color: #111111; }
 
