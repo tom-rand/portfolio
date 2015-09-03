@@ -5,9 +5,7 @@
 */
 
 html {
-	background: #FAFAFA;
-	padding: 20px;
-	overflow-x: hidden;
+	background: #fffff8;
 }
 
 .frame {
@@ -29,7 +27,7 @@ body {
 	-------------------- FONTS -------------------- 
 	----------------------------------------------- 
 */
-$primaryBlack: rgba(0,0,0,.87);
+$primaryBlack: #111111;
 $secondaryBlack: rgba(0,0,0,.57);
 $href: #00a0dd;
 
@@ -42,7 +40,7 @@ $greenFont: #138A72;
 
 
 h1, h2, h3, h3, h4, h5, h6, p, li {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gill Sans', 'Montserrat', sans-serif;
 	color: $primaryBlack;
 
 	// FlowType Setting
@@ -61,14 +59,14 @@ h2 {
 
 h3 {
 	// FlowType Setting
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: 400;
 }
 
 h4, h5, h6, p {
 	// FlowType Setting
-	font-size: 1em;
-	font-weight: 300;
+	font-size: 1em;	
+	font-weight: 500;
 }
 
 h5 {
@@ -101,9 +99,9 @@ p {
 
 .logo {
 	font-weight: 600;
+	color: $primaryBlack; 	
 	a {
 		color: $primaryBlack; 	
-
 	}
 }
 
@@ -239,7 +237,7 @@ nav {
 	----------------------------------------------- 
 */
 
-article {
+
 
 	section {
 		border-top: 1px solid #EDEDED;
@@ -259,9 +257,7 @@ article {
 			margin: 0 auto;
 			float: left;			
 
-			img {
-				width: 100%;	
-			}
+			
 
 
 		}
@@ -282,7 +278,11 @@ article {
 		margin-top: 50px;
 	}
 
-}
+	img {
+				width: 100%;	
+			}
+
+
 
 
 .project-details {

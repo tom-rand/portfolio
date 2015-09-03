@@ -4,9 +4,7 @@
 	----------------------------------------------- 
 */
 html {
-  background: #FAFAFA;
-  padding: 20px;
-  overflow-x: hidden; }
+  background: #fffff8; }
 
 .frame {
   position: fixed;
@@ -24,8 +22,8 @@ body {
 	----------------------------------------------- 
 */
 h1, h2, h3, h3, h4, h5, h6, p, li {
-  font-family: 'Open Sans', sans-serif;
-  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Gill Sans', 'Montserrat', sans-serif;
+  color: #111111;
   line-height: 1.5; }
 
 h1 {
@@ -35,19 +33,19 @@ h2 {
   font-size: 3em; }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 400; }
 
 h4, h5, h6, p {
   font-size: 1em;
-  font-weight: 300; }
+  font-weight: 500; }
 
 a {
   text-decoration: none;
   color: #00a0dd; }
 
 p {
-  color: rgba(0, 0, 0, 0.87); }
+  color: #111111; }
 
 .subtext {
   color: rgba(0, 0, 0, 0.57); }
@@ -59,9 +57,10 @@ p {
   font-size: 12px; }
 
 .logo {
-  font-weight: 600; }
+  font-weight: 600;
+  color: #111111; }
   .logo a {
-    color: rgba(0, 0, 0, 0.87); }
+    color: #111111; }
 
 .section-label {
   margin-bottom: 5px;
@@ -107,7 +106,7 @@ header {
     margin: 0; }
   header p:first-child {
     margin-bottom: 5px;
-    color: rgba(0, 0, 0, 0.87); }
+    color: #111111; }
   header .menu {
     position: absolute;
     top: 4px;
@@ -131,7 +130,7 @@ nav {
         color: rgba(0, 0, 0, 0.87); }
       nav ul li a:hover {
         cursor: pointer;
-        color: rgba(0, 0, 0, 0.87);
+        color: #111111;
         transition: .5s;
         text-decoration: underline; }
 
@@ -140,29 +139,31 @@ nav {
 	-------------------- ARTICLE ------------------ 
 	----------------------------------------------- 
 */
-article section {
+section {
   border-top: 1px solid #EDEDED;
   padding-top: 20px;
   padding-bottom: 20px; }
-  article section h3 {
+  section h3 {
     margin-bottom: 0.5rem; }
-  article section h6 {
+  section h6 {
     color: rgba(0, 0, 0, 0.57); }
-  article section .project-snapshot {
+  section .project-snapshot {
     width: 25%;
     margin: 0 auto;
     float: left; }
-    article section .project-snapshot img {
-      width: 100%; }
-  article section .project-brief {
+  section .project-brief {
     padding-left: 20px;
     float: right;
     width: 66%; }
-    article section .project-brief a:hover {
+    section .project-brief a:hover {
       text-decoration: underline; }
-article .work-samples {
+
+.work-samples {
   text-align: center;
   margin-top: 50px; }
+
+img {
+  width: 100%; }
 
 .project-details {
   padding-bottom: 60px; }
