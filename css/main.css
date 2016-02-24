@@ -4,7 +4,7 @@
 	----------------------------------------------- 
 */
 html {
-  background: #fffff8; }
+  background: #fafafa; }
 
 .frame {
   position: fixed;
@@ -76,26 +76,42 @@ p {
 	---------------- COLOR THEMES ----------------- 
 	----------------------------------------------- 
 */
-.blue h3, .blue a {
-  color: #22638F; }
-.blue .project-header {
-  background: #3498DB; }
-  .blue .project-header .header-detail {
-    color: #22638F; }
+.blue {
+  background: #00a0dd; }
+  .blue h3, .blue a {
+    color: #00a0dd; }
+  .blue .project-header {
+    background: #00a0dd; }
+    .blue .project-header .header-detail {
+      color: #00a0dd; }
 
-.purple h3, .purple a {
-  color: #714185; }
-.purple .project-header {
+.neutra-green {
+  background: #ACDE2D; }
+  .neutra-green h3, .neutra-green a {
+    color: #A3CD39; }
+
+.light-blue {
+  background: #FCED0F; }
+  .light-blue h3, .light-blue a {
+    color: #DBCD00; }
+
+.purple {
   background: #9B59B6; }
-  .purple .project-header .header-detail {
+  .purple h3, .purple a {
     color: #714185; }
+  .purple .project-header {
+    background: #9B59B6; }
+    .purple .project-header .header-detail {
+      color: #714185; }
 
-.green h3, .green a {
-  color: #138A72; }
-.green .project-header {
+.green {
   background: #1ABC9C; }
-  .green .project-header .header-detail {
+  .green h3, .green a {
     color: #138A72; }
+  .green .project-header {
+    background: #1ABC9C; }
+    .green .project-header .header-detail {
+      color: #138A72; }
 
 /*  
 	----------------------------------------------- 
@@ -103,12 +119,13 @@ p {
 	----------------------------------------------- 
 */
 header {
-  padding-bottom: 20px;
   position: relative; }
+  header .columns {
+    padding: 0 !important; }
   header p {
-    margin: 0; }
+    margin: 0;
+    font-weight: 600; }
   header p:first-child {
-    margin-bottom: 5px;
     color: #111111; }
   header .menu {
     position: absolute;
@@ -128,7 +145,8 @@ nav {
       float: left;
       margin-left: 20px; }
       nav ul li a {
-        color: rgba(0, 0, 0, 0.57); }
+        color: rgba(0, 0, 0, 0.57);
+        font-weight: 600; }
       nav ul li .active {
         color: rgba(0, 0, 0, 0.87); }
       nav ul li a:hover {
@@ -143,13 +161,22 @@ nav {
 	----------------------------------------------- 
 */
 section {
-  border-top: 1px solid #EDEDED;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  margin-bottom: 30px; }
   section h3 {
     margin-bottom: 0.5rem; }
   section h6 {
     color: rgba(0, 0, 0, 0.57); }
+  section .screenshot {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    section .screenshot img {
+      width: 100%;
+      box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      overflow: hidden; }
+  section .brief {
+    background: #F4F4F4;
+    padding: 40px; }
   section .project-snapshot {
     width: 25%;
     margin: 0 auto;
@@ -161,12 +188,12 @@ section {
     section .project-brief a:hover {
       text-decoration: underline; }
 
+.about {
+  padding: 0 20%; }
+
 .work-samples {
   text-align: center;
   margin-top: 50px; }
-
-img {
-  width: 100%; }
 
 .project-details {
   padding-bottom: 60px; }
