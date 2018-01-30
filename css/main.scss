@@ -38,6 +38,7 @@ $purpleBkg: #9B59B6;
 $purpleFont: #714185;
 $greenBkg: #1ABC9C;
 $greenFont: #138A72;
+$whoop: #1F3B4D;
 
 
 h1, h2, h3, h3, h4, h5, h6, p, li {
@@ -153,6 +154,13 @@ p {
 	background: $lightBlue;
 	h3, a {
 		color: #DBCD00;
+	}
+}
+
+.whoop {
+	background: $whoop;
+	h3, a {
+		color: $whoop;
 	}
 }
 

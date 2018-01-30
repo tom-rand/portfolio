@@ -95,6 +95,11 @@ p {
   .light-blue h3, .light-blue a {
     color: #DBCD00; }
 
+.whoop {
+  background: #1F3B4D; }
+  .whoop h3, .whoop a {
+    color: #1F3B4D; }
+
 .purple {
   background: #9B59B6; }
   .purple h3, .purple a {
