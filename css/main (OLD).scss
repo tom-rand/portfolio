@@ -1,0 +1,488 @@
+/*  
+	----------------------------------------------- 
+	-------------------- GENERAL ------------------ 
+	----------------------------------------------- 
+*/
+
+html {
+	background: #fafafa;
+}
+
+.frame {
+	position: fixed;
+	border: 20px solid #333333;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+body {
+	// FlowType Setting
+	font-size: 18px;
+}
+
+
+/*  
+	----------------------------------------------- 
+	-------------------- FONTS -------------------- 
+	----------------------------------------------- 
+*/
+$primaryBlack: #111111;
+$secondaryBlack: rgba(0,0,0,.57);
+$href: #00a0dd;
+
+$blueBkg: #00a0dd;
+$lightBlue: #FCED0F;
+$blueFont: #00a0dd;
+$purpleBkg: #9B59B6;
+$purpleFont: #714185;
+$greenBkg: #1ABC9C;
+$greenFont: #138A72;
+$whoop: #1F3B4D;
+
+
+h1, h2, h3, h3, h4, h5, h6, p, li {
+	font-family: 'Gill Sans', 'Montserrat', sans-serif;
+	color: $primaryBlack;
+
+	// FlowType Setting
+	line-height: 1.5;
+}
+
+h1 {
+	// FlowType Setting
+	font-size: 4em;
+}
+
+h2 {
+	// FlowType Setting
+	font-size: 3em;
+}
+
+h3 {
+	// FlowType Setting
+	font-size: 2em;
+	font-weight: 400;
+}
+
+h4, h5, h6, p {
+	// FlowType Setting
+	font-size: 1em;	
+	font-weight: 500;
+}
+
+h5 {
+
+}
+
+h6 {
+		
+}
+
+a {
+	text-decoration: none;
+	color: $href;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	color: $primaryBlack;
+}
+
+.subtext {
+	color: $secondaryBlack;
+}
+
+.caption {
+	text-align: center;
+	color: $secondaryBlack;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.logo {
+	font-weight: 600;
+	color: $primaryBlack; 	
+	a {
+		color: $primaryBlack; 	
+	}
+}
+
+.section-label {
+	margin-bottom: 5px;
+	margin-top: 20px;
+	font-size: .75em;
+	color: $secondaryBlack;
+}
+
+/*  
+	----------------------------------------------- 
+	---------------- COLOR THEMES ----------------- 
+	----------------------------------------------- 
+*/
+
+.blue {
+	background: $blueBkg;
+	h3, a {
+		color: $blueFont;
+	}
+
+
+	.project-header {
+		background: $blueBkg;
+		.header-detail {
+			color: $blueFont;
+		}	
+	}
+
+	.project-brief {
+	
+	}
+}
+
+.neutra-green {
+	background: #ACDE2D;
+	h3, a {
+		color: #A3CD39;
+	}
+}
+
+.light-blue {
+	background: $lightBlue;
+	h3, a {
+		color: #DBCD00;
+	}
+}
+
+.whoop {
+	background: $whoop;
+	h3, a {
+		color: $whoop;
+	}
+}
+
+.purple {
+	background: $purpleBkg;
+	h3, a {
+		color: $purpleFont;
+	}
+	.project-header {
+		background: $purpleBkg;
+		.header-detail {
+			color: $purpleFont;
+		}	
+	}
+	.project-brief {
+
+	}
+}
+
+.green {
+	background: $greenBkg;
+	h3, a {
+		color: $greenFont;
+	}
+	.project-header {
+		background: $greenBkg;
+		.header-detail {
+			color: $greenFont;
+		}	
+	}
+	.project-brief {
+		
+	}
+}
+
+
+
+
+/*  
+	----------------------------------------------- 
+	-------------------- HEADER ------------------- 
+	----------------------------------------------- 
+*/
+
+
+header {
+	.columns{ 
+		padding: 0 !important;
+	}
+	position: relative;
+
+	p {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	p:first-child {
+		color: $primaryBlack;
+	}
+
+	.menu {
+		position: absolute;
+		top: 4px;
+		right: 0;
+
+		img {
+			width: 20px;
+			cursor: pointer;
+		}
+
+	}
+
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	right:0;
+
+
+
+	ul {
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 20px;
+			
+			a {
+				color: $secondaryBlack;
+				font-weight: 600;	
+			}
+
+			.active {
+				color: rgba(0,0,0,.87);
+			}
+
+			a:hover {
+				cursor: pointer;
+				color: $primaryBlack;
+				transition: .5s;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+/*  
+	----------------------------------------------- 
+	-------------------- ARTICLE ------------------ 
+	----------------------------------------------- 
+*/
+
+
+
+	section {
+		margin-bottom: 30px;
+		background: #101518;
+
+		p {
+			color: #FFF; 
+		}
+
+		h3 {
+			margin-bottom: 0.5rem;
+			color: #FFF;
+		}
+
+		h6 {
+			color: $secondaryBlack;
+		}
+
+		.screenshot {
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			img {
+				width: 100%;
+				box-shadow: 0 0px 4px 0 rgba(0,0,0,.2);
+				border-radius: 4px;
+				overflow: hidden;
+			}
+		}
+
+		.brief {
+	
+			background: #F4F4F4;
+			padding: 40px;
+		}
+
+		.project-snapshot {
+			width: 25%;
+			margin: 0 auto;
+			float: left;			
+
+		}
+
+		.project-brief {
+			padding-left: 20px;	
+			float: right;
+			width: 66%;
+
+			a:hover {
+				text-decoration: underline;
+			}	
+		}
+	}
+
+	.about {
+		padding: 0 20%;
+	}
+
+	.work-samples {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+
+
+.project-details {
+
+	padding-bottom: 60px;
+
+	h3 {
+		text-align: center;
+	}
+
+	h5 {
+		text-align: center;
+		color: $secondaryBlack;
+
+	}
+
+	h6 {
+		font-weight: 600;
+	}
+
+	.project-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		// background: #EDEDED;
+		z-index: 10;
+		width: 100%;
+
+	
+
+		.wrapper {
+			max-width: 600px;
+		}
+
+		.row {
+			
+			margin: 0 auto;
+		}
+
+		.header-detail {
+
+			h6 {
+				margin: 0 0 10px 0;
+			}
+
+			a {
+				color: inherit;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.container {
+		
+
+			.close {
+				position: absolute;
+				top: 40px;
+				right: 40px;
+				cursor: pointer;
+				opacity: 0.5;
+
+			img {
+				width: 20px;
+			}
+		}
+	}
+
+	.close:hover {
+		opacity: 1;
+	}
+
+
+	}
+
+	.header-transformed {
+		-webkit-transform: perspective( 30px ) rotateX( 0deg );
+	}
+
+	.one-up {
+		img {
+			width: 100%;
+		}	
+	}
+
+	.two-up {
+		width: 50%;
+		float: left;
+		img {
+			width: 100%;
+		}
+	}
+
+	.four-up {
+		width: 25%;
+		float: left;
+		img {
+			width: 95%;
+		}
+	}
+
+	.four-up:last-child {
+		margin-right: 0;
+	}
+
+	h6 { 
+		margin-top: 40px;
+	}
+
+	.backTo-footer {
+		position: fixed;
+		bottom:0px;
+		left: 0px;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+		color: $href;
+		cursor: pointer;
+		background-image: linear-gradient(-180deg, rgba(250,250,250,0.90) 0%, #FAFAFA 100%);
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.footer {
+	margin-bottom: 20px;
+
+	p {
+		font-size: .75em;
+		color: $secondaryBlack;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

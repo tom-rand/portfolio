@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Tom Rand</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  
+    <!-- Hotjar Tracking Code for http://www.tomrand.me -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:159412,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+  
+
+</head>
+
+
+
+<body>
+  <section id="header" class='row'>   
+    <header>
+        <a href="http://www.tomrand.me"><p>Tom Rand</p></a>
+        <nav style="display: none;">
+          <ul>
+            <li><a class="active" href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>   
+          <div style="clear:both"></div>
+        </nav>
+      </header>
+  </section> 
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container story">
+    <div class="row">
+      <div class="one-column" style="margin-top: 5%">
+        <h2>Building a Frictionless Acquisition to Activation Experience</h2>
+
+        <h3>A bit of background </h3>
+        <p>A key segment of the WHOOP member journey is purchasing a membership (i.e. “joining”) and then setting up the WHOOP Strap (i.e. “activating”).</p>
+        <div class="six columns" style="margin-left: 0;">
+          <p>User flow:</p>
+          <ol>
+              <li>Visit <a target="_blank" href="http://join.whoop.com">join.whoop.com</a></li>
+              <li>Purchase a WHOOP Membership</li>
+              <li>Receive the WHOOP Strap (…in about 1 week)</li>
+              <li>Download the WHOOP App</li>
+              <li>Connect the WHOOP Strap</li>
+              <li>Setup the user account</li>
+              <li>Start the subscription </li>
+          </ol>
+        </div>
+        <div class="six columns">
+          <p>Key objectives:</p>
+          <ol>
+            <li>Ensure the member can connect their Strap (via Bluetooth)</li>
+            <li>Start the correct subscription for billing purposes</li>
+            <li>Collect user data to calibrate algorithms</li>
+          </ol>
+        </div>
+        <div style="clear:both"></div>
+        <p>The WHOOP Strap was effectively a “key” to using the WHOOP app and as a result, starting the subscription billing cycle. Making sure this flow was simple to follow and reliable was critical to the WHOOP member experience as well as the business. This directly impacted WHOOP’s ability to generate revenue. Additionally, the account setup flow included key steps that would calibrate WHOOP algorithms. Getting this right was critical to nailing the member’s first time user experience.</p>
+
+        <h3>Edge case hell</h3>
+        <p>The initial happy path user flow for this experience was fairly simple. The member would connect their WHOOP Strap, setup their account, and be off to using the app. Simple. The complexity of this system grew significantly as the business pivoted business models, added new lines of business, and added additional SKUs. </p>
+        <p>Here are a few examples:</p>
+        <ul>
+          <li>Members could choose from 3 different membership subscription plan options (1 month, 12 month, or 18 month)</li>
+          <li>Members could join for themselves or purchase as a gift </li>
+          <li>Members could receive “seed” straps that would contain a variety of pre-paid subscription lengths. This was for influencers for example. </li>
+          <li>Members could receive their strap as part of a corporate enterprise deal.</li>
+          <li>Members could receive a “used” strap from a friend</li>
+          <li>..the list goes on...</li>
+        </ul>
+        <p>In the end, the system needed to make sure the member creating an account was billed correctly or not at all in the case of an enterprise deal (i.e. memberships were subsidized). </p>
+        <p>Additionally, the system and resulting member experience needed to adapt to this ever changing landscape. We needed to anticipate requirements and assumptions changing as the WHOOP business matured. Enabling this maturity was critical. </p>
+
+        <h3>Our first failure: using codes</h3>
+        <p>The initial activation system leveraged activation codes. The member would need to enter an invite code (usually delivered via email) to start the activation flow. The code, if valid, was then used to distinguish between consumers and enterprise members. Consumers are billing via a subscription. Enterprise members are not billed (i.e. their membership are subsidized).</p>
+        <img src="images/whoop/feature-old-activation.png">
+        <p class="caption">The original activation requiring codes.</p>
+
+
+        <p>While this architecture worked in the early days at a small scale, its created a number of issues as the volume of members scaled.</p>
+        <ul>
+          <li>Consumers would reach out to support wondering if they needed a code. </li>
+          <li>Enterprise customers would forget their code and need to contact someone to get it.</li>
+          <li>Enterprise customers would create consumer-based account and get billed. </li>
+        </ul>
+
+        <p>Support tickets racked up and members would abandon the activation flow. This become costly to support and the activation flow drop-offs impacted the bottom line. </p>
+        <p>We learned that at scale we could not rely on members to make the “right” choice. Even if the percentage of members running into issues was small (e.g. 5%), the absolute impact become signifiant.</p>
+        <p>Additionally, around the same time the above case became a problem, the business was considering offing multiple membership options. A better system and experience was needed.</p>
+
+
+        <h3>A flexible system design</h3>
+        <p>Moving forward we need to build a system that was resilient to change and prevented the member from making mistakes.</p>
+        <p>We landed on a key principle going into the design of the experience; don’t make the member make any decisions and do the work for the member. We envisioned an experience where the member didn’t need to specify their “ member type” nor did they need to enter obscure codes, which are difficult to recall.</p>
+        <p>We also envisioned a system that would be simple to update over time. We needed to explore questions like “How might we react if the business wanted to offer new products?”, “How might we handle changes to the subscriptions offered?”.</p>
+
+        <p>2 key decision arose from our brainstorming:</p>
+        <ul>
+          <li>Business logic must exist on the server (e.g. subscription options, if a credit card is needed, etc)</li>
+          <li>The WHOOP Strap would be used to identify the customer. We were able to build a signature onto the firmware of each WHOOP Strap.</li>
+        </ul>
+        <p>Once the Strap signature was received, things like the order could be looked up, which would give the server all the information needed to determine the end-user experience. In other words, we built the activation flow in a modular way such that the backend could determine which screens were necessary to show. This was all from the member just connecting their strap to the app. </p>
+        <p>Scroll right to view the activation flow logic.</p>
+        <div class="horiz-scroll">
+          <img src="images/whoop/feature-activation-logic.png">
+        </div>
+        <p class="caption">New user activation flow logic.<a target="_blank" href="https://whimsical.com/whoop-activation-flow-RRdEjx8JPJTjeuNLM8hTfG@VsSo8s35UqE4kQaULDxV6E"> View diagram in Whimsical</a>.</p>
+
+
+        <p>On a personal note, it was fun getting to collaborate across software and hardware engineering teams to bring an experience to life. Good example of starting with a vision and backing into the technical requirements. I think this is also a good example of going the extra mile to bury as much complexity as possible such that the user experience is a simple as possible. Furthermore, the net result was less drop-off during activation as well as fewer support tickets. Good for revenue and cost savings!</p>
+
+        <p>Scroll right to view the activation flow UI. No codes!</p>
+        <div class="horiz-scroll">
+          <img src="images/whoop/feature-new-activation.png">
+        </div>
+        <p class="caption">The final activation flow UI Design.<a target="_blank" href="https://www.figma.com/file/LCliP7x6RIM5u4vsFLw9el/Tom-Rand-Selected-Works?node-id=16%3A49253"> View concepts in Figma</a>.</p>
+
+
+    </div>
+    <section class='footer'>
+      <p>© Copyright 2022 tomrand.me</p>
+    </section>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/flowtype.js"></script>
+  <script type="text/javascript">
+    // Initialize FlowType Plugin
+  $('body').flowtype({
+     minimum   : 320,
+     maximum   : 1200,
+     minFont   : 14,
+     maxFont   : 18,
+     fontRatio : 30
+  });
+  </script>
+</body>
+
+</html>

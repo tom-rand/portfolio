@@ -46,12 +46,9 @@
     width: 85%;
     padding: 0; 
   }
-  .screenshot {
-    padding: 40px;    
-  }
-  .brief {
-    position: static;
-  }
+
+
+
 }
 
 /* For devices larger than 550px */
@@ -70,7 +67,7 @@
     margin-left: 4%; }
   .column:first-child,
   .columns:first-child {
-    margin-left: 0; padding-left: 4%; }
+    margin-left: 0; padding-left: 8%; }
 
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
