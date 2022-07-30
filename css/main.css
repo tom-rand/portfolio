@@ -36,17 +36,17 @@ h1 {
 
 h2 {
   font-size: 3em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h4, h5, h6, p {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 a {
