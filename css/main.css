@@ -296,6 +296,20 @@ nav ul li a:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.callout {
+  background: #E5E5E5;
+  padding: 20px 50px;
+  position: relative;
+}
+.callout .icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.callout .content p {
+  margin-bottom: 0;
+}
+
 /*  
 	----------------------------------------------- 
 	-------------------- ARTICLE ------------------ 
