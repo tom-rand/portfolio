@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Tom Rand</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  
+    <!-- Hotjar Tracking Code for http://www.tomrand.me -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:159412,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+  
+
+</head>
+
+
+
+<body>
+  <section id="header" class='row'>   
+    <header>
+        <a href="/"><p>&#8592; Back to Home</p></a>
+        <nav style="display: none;">
+          <ul>
+            <li><a class="active" href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>   
+          <div style="clear:both"></div>
+        </nav>
+      </header>
+  </section> 
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container story">
+    <div class="row">
+      <div class="one-column" style="margin-top: 5%">
+        <h2>Infinio Accelerator: Designing an Enterprise IT Product</h2>
+
+        <h3>Objective</h3>
+        <p>The purpose of the Infinio Accelerator product was to improve the performance of servers. IT Administrators would face difficulties maintaining adequate application performance as resource demands scaled beyond the capabilities of the hardware infrastructure. Infinio was a software-only solution that would solve this problem through a novel distributed server-side cache that was built to be integrated into a VMware environment. 
+
+        <p>The goal of the UI for the Infinio Accelerator was two fold:</p>
+        <ol>
+          <li>A simple way to install the product</li>
+          <li>An administrative 'console' that provided performance analytics as well as configuration tools</li>
+        </ol>
+        <p>From early user research with IT administrators, we knew that breaking into the market with new, novel software would come with hesitation. Admins, rightfully so, tend to be risk averse. A key aspect of their job is to keep the lights on. There would be some natural skepticism to rely on new technology like Infinio.</p>
+
+        <h3>Designing for low friction</h3>
+        <p>The Infinio go-to-market strategy centered around making the software easy to try. Part of an admin's process of vetting new technology is to run it in a lab. If Infinio could create a low friction means of spinning up the tech and putting it to the test, we increased our chances of making an impression.</p>
+        <p>So, we created a installation experience to make the task as simple as possible for admins. Steps, copy, and settings were carefully chosen to reduce as much friction as possible. Scroll right to view samples:</p>
+        <div class="horiz-scroll">
+          <img src="images/infinio/feature-infinio-installer.png">
+        </div>
+        
+        <p class="caption">Infinio installation wizard</p>
+        <img src="images/infinio/feature-infinio-accelerate.png">
+        <p class="caption">Infinio setup modal</p>
+
+
+        <h3>Providing easy-to-use configuration</h3>
+        <p>Enterprise infrastructure technology typically needs to be tuned and configured to meet the needs of each organization. Infinio approached this problem in a similar way to the installation experience; make it as simple as possible.</p> 
+        <p>We created a configuration experience that allowed the admin to tune the system while gauging the impact to their infrastructure. In technical language, they could increase the cache size while monitoring how much memory was being consumed at the server lever. Cache size was the benefit, but server resources (i.e. memory) was the cost.</p>
+        <img src="images/infinio/feature-infinio-cache.png">
+        <p class="caption">Infinio cache configuration</p>
+
+        <h3>Analytics dashboard</h3>
+        <p>The final key piece to the Infinio user experience was the analytics. Admins would use this information to understand the impact Infinio was having on their infrastructure. Sometimes this would be used to troubleshoot, other times this would be used to gauge the effectiveness of the product. This aspect of the UI was iterated upon the most based on how the market was responding to the product. Assumptions about how admins perceive value were challenged, which opened opportunities for improvement!</p>
+
+        <img src="images/infinio/feature-infinio-old.png">
+        <p class="caption">Earlier iteration of the Infinio dashboard</p>
+
+        <img src="images/infinio/feature-infinio-home.png">
+        <p class="caption">Infinio dashboard</p>
+        <img src="images/infinio/feature-infinio-analytics.png">
+        <p class="caption">Infinio analytics drill down</p>
+
+      </div>
+    </div>
+    <section class='footer'>
+      <p>© Copyright 2022 tomrand.me</p>
+    </section>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/flowtype.js"></script>
+  <script type="text/javascript">
+    // Initialize FlowType Plugin
+  $('body').flowtype({
+     minimum   : 320,
+     maximum   : 1200,
+     minFont   : 14,
+     maxFont   : 18,
+     fontRatio : 30
+  });
+  </script>
+</body>
+
+</html>
