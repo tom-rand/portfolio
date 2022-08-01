@@ -6,6 +6,7 @@
 
 html {
 	background: #ffffff;
+	scroll-behavior: smooth;
 }
 
 .frame {
@@ -201,7 +202,7 @@ p {
 
 .intro {
 	background: none;
-	h2, p {
+	h2, p, h4 {
 		color: $primaryBlack;	
 	}
 	
@@ -212,6 +213,30 @@ p {
 	.columns:first-child {
 		padding-left: 0;	
 	}
+
+	h1, h4 {
+		font-weight: bold;
+	}
+
+	.divider {
+		margin-bottom: 3em;
+		margin-top: 3em;
+	}
+
+	img {
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 15px;
+		li {
+
+		}
+	}
+
 }
 
 
@@ -257,6 +282,10 @@ p {
 	}
 }
 
+.card {
+	height: 500px;
+	overflow-y: hidden;
+}
 
 /*  
 	----------------------------------------------- 
@@ -378,13 +407,14 @@ nav {
 		}
 	}
 
-	.divider {
+
+}
+
+.divider {
 		height: 1px;
 		width: 100%;
 		border-top: 1px solid rgba(0,0,0,.2);
 	}
-
-}
 
 .callout {
 	background: #E5E5E5;
@@ -438,8 +468,7 @@ nav {
 		}
 
 		.screenshot {
-			padding-top: 40px;
-			padding-bottom: 40px;
+			padding-top: 60px;
 
 			img {
 				width: 50%;
@@ -633,7 +662,7 @@ nav {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
 
 	.story {
 		width: 85% !important;

@@ -65,6 +65,9 @@
   .column,
   .columns {
     margin-left: 4%; }
+  .links {
+    margin-left: 8%;
+  }
   .column:first-child,
   .columns:first-child {
     margin-left: 0; padding-left: 8%; }

@@ -5,6 +5,7 @@
 */
 html {
   background: #ffffff;
+  scroll-behavior: smooth;
 }
 
 .frame {
@@ -152,7 +153,7 @@ p {
 .intro {
   background: none;
 }
-.intro h2, .intro p {
+.intro h2, .intro p, .intro h4 {
   color: #111111;
 }
 .intro .no-left-margin {
@@ -161,7 +162,22 @@ p {
 .intro .columns:first-child {
   padding-left: 0;
 }
-
+.intro h1, .intro h4 {
+  font-weight: bold;
+}
+.intro .divider {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+.intro img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.intro ul {
+  list-style: disc;
+  padding-left: 15px;
+}
 .pandemic {
   background-image: url(pandemic-bkg.png);
   background-size: cover;
@@ -194,6 +210,11 @@ p {
 
 .infinio .screenshot img {
   width: 80%;
+}
+
+.card {
+  height: 500px;
+  overflow-y: hidden;
 }
 
 /*  
@@ -290,7 +311,8 @@ nav ul li a:hover {
   height: 100%;
   width: auto;
 }
-.story .divider {
+
+.divider {
   height: 1px;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -333,8 +355,7 @@ section h6 {
   color: rgba(255, 255, 255, 0.6);
 }
 section .screenshot {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
 }
 section .screenshot img {
   width: 50%;
@@ -478,7 +499,7 @@ section .project-brief a:hover {
   color: rgba(0, 0, 0, 0.57);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .story {
     width: 85% !important;
   }
