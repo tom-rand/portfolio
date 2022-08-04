@@ -30,20 +30,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.ico">
   
-    <!-- Hotjar Tracking Code for http://www.tomrand.me -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:159412,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-
-  
-
 </head>
 
 
@@ -72,6 +58,16 @@
         <p>By the Summer of 2021, WHOOP launched the Health Monitor which represented a key shift in the way members would to consume biometric data. Historically, the lens on key WHOOP data points had been focused on fitness and training for athletic events. Shifting to a health oriented context stemmed from 2 key trends within the WHOOP member base:</p> 
         <ul>
           <li>The member mix had been shifting from early adopter elite athletes to a more generalist consumer with basic health improvement desires. Designing for this new type of consumer is fundamentally different than the early adopters in terms of needs/wants and product usage patterns.</li>
+          <div class="row ">
+            <div class="six columns" style="padding-left: 0;">
+              <img class="feature" src="images/whoop/feature-persona-optimizer.png">
+              <p class="caption">Early Adopter Member Type</p>
+            </div>
+            <div class="six columns">
+              <img class="feature" src="images/whoop/feature-persona-newme.png">
+              <p class="caption">Emergent Member Type</p>
+            </div>
+          </div>
           <li>Through a series of successful health monitoring type features we gained additional insight around how members would like to consume data points on an on-going basis.</li>
         </ul>    
 
@@ -89,7 +85,7 @@
         <p>Late 2019 we set out to create a new feature, which eventually became what was known as the WHOOP Journal. The purpose of the WHOOP Journal was to collect behavioral information, such as bedtime rituals, lifestyle choices (e.g. drinking alcohol), and various Recovery modalities to help members understand their impact to Sleep and Recovery data. Members had often cited wanting to understand what actually impacts their Recovery. The WHOOP Journal was the input mechanism to deliver this analysis.</p>
         <p>While designing the WHOOP Journal, the question of extensibility came to mind. What would members want to track? How many behaviors would members want to track? How might we react when members request certain behaviors not provided within the Journal. It’s worth noting that we made the decision to curate a library of behaviors instead of making the Journal completely customizable to allow for big data studies across the member base (e.g. common behaviors across members can be studied). This was key. User research helped us forecast the types of behaviors as well as the manner in which we could update the journal library on the fly. </p>
         <p>This architecture ending up coming in handy especially in March of 2020; we decided to add “COVID-19 Symptoms” as a journal behavior and made it accessible to all members. Sure enough members began reporting experiencing COVID-19 symptoms. We also leveraged a simple Typeform survey integration to gather additional data points such as COVID-19 test results, severity of symptoms, etc. This was critical for data science research.</p>
-        <img src="images/whoop/feature-journal.png">
+        <img class="feature" src="images/whoop/feature-journal.png">
         <p class="caption">The WHOOP Journal containing the 'COVID-19 Symptoms' state.</p>
 
         <h3>Discovering a new experience</h3>
@@ -103,7 +99,7 @@
           <li>“Voice of WHOOP” coaching copy that helped member interpret the data science in plain language.</li> 
         </ol>
         <p>Fortunately these components existed within the product for other metrics, so we were able to quickly write the coaching logic, build the feature, and launch it.</p>
-        <img src="images/whoop/feature-rr.png">
+        <img class="feature" src="images/whoop/feature-rr.png">
         <p class="caption">A trend of Respiratory Rate values. Tapping displays value labels.</p>
 
         <h3>Finding early signal</h3>
@@ -119,7 +115,7 @@
           <img src="images/whoop/feature-healthmonitor-concepts.png">
         </div>
         <p class="caption">Early Health Monitor Concepts</p>
-        <a target="_blank" href="https://www.figma.com/file/LCliP7x6RIM5u4vsFLw9el/Tom-Rand-Selected-Works?node-id=2%3A12272"><img src="images/whoop/feature-healthmonitor.png"></a>
+        <img class="feature" src="images/whoop/feature-healthmonitor.png">
         <p class="caption" target="_blank" href="https://www.figma.com/file/LCliP7x6RIM5u4vsFLw9el/Tom-Rand-Selected-Works?node-id=2%3A12272">The Health Monitor showing metrics that are in range (left) and out of range (right). <a target="_blank" href="https://www.figma.com/file/LCliP7x6RIM5u4vsFLw9el/Tom-Rand-Selected-Works?node-id=2%3A12272">View additional design samples in Figma</a>.</p>
 
 
@@ -130,25 +126,35 @@
     <section class='footer'>
       <p>© Copyright 2022 tomrand.me</p>
     </section>
+
+
   </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="js/flowtype.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript">
     // Initialize FlowType Plugin
   $('body').flowtype({
      minimum   : 320,
      maximum   : 1200,
-     minFont   : 14,
-     maxFont   : 18,
+     minFont   : 12,
+     maxFont   : 16,
      fontRatio : 30
   });
   </script>
+
 </body>
 
+
+
 </html>
+
+
+
+
+
+

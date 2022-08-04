@@ -1,79 +1,26 @@
-// Set the size of the html document (frame)
-function setHTMLDimentions() {
-	$('.frame').css('height', window.innerHeight - 40 + 'px');
-	$('.frame').css('width', window.innerWidth - 40 + 'px');
+function openImageOverlay() {
+	$('.feature').click(function(){
+      var graphic_path = $(this).attr('src');    
+      $('html').append("<div id='overlay'><img src=" + graphic_path + "><p class='overlay-close'>Close</p></div>");
+      //$('body').addClass('no-scroll');
+
+      closeOverlay();
+    });	
+} 
+
+
+function closeOverlay() {
+  $('#overlay').click(function() {
+    $('#overlay').remove();
+    //$('body').removeClass('no-scroll');
+  });
 }
 
-// Set the size of the html document (frame)
-function setFooterDimentions() {
-	$('.backTo-footer').css('width', window.innerWidth - 40 + 'px');
-}
-
-
-// What happens when the user resizes the browser...
-function onResizeEvent() {
-	$(window).resize(function() {
-		setHTMLDimentions();
-	})
-}
-
-// What happens when the user clicks on a project...
-function selectProjectEvent() {
-	$('.linked-list li').click(function(evt) {
-		toggleProjectDetails(this);
-	});
-}
-
-// What happens when the user clicks on the back to projects link...
-function selectBackToProjectEvent() {
-	$('.backTo-footer').click(function(evt) {
-		var targetProject = $(this).parent().prev('li');
-		toggleProjectDetails(targetProject);
-	});
-}
-
-// Toggle the detail content of the given project.
-function toggleProjectDetails(project) {
-	var targetProject = $(project).next('.project-details');
-	var projectName = $(project).attr('project-name');
-
-	$('.linked-list li').not(project).fadeToggle();
-	$(targetProject).animate({height:'toggle'}, "swing");	
-	$('.frame').fadeToggle();
-	$('.linked-list .projectType-label').fadeToggle();
-	$('header').animate({height: 'toggle'}, 'swing');
-
-	$(targetProject).find('.project-header').toggleClass('header-transformed');
-}
-
-// What happens when the user clicks on the menu icon...
-function selectMenuIconEvent() {
-	$('.menu').click(function(evt) {
-		$('#menu-overlay').fadeIn();
-	});
-}
-
-// What happens when the user clicks the close icons...
-function selectCloseIconEvent() {
-	$('.close').click(function() {
-		var targetProject = $(this).parents('.project-details').prev('li');
-		toggleProjectDetails(targetProject);
-	});
-}
 
 
 $(function initialize() {
-	onResizeEvent();
 
-	// Initialize Click Event Listeners
-	selectProjectEvent();
-	selectCloseIconEvent();
-	selectMenuIconEvent();
-
-	// Initialize Dimention Setters
-	setHTMLDimentions();
-
-	
+	openImageOverlay();
 	
 
 
