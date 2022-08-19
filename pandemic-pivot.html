@@ -81,7 +81,7 @@
           <div style="clear: both;"></div>
         </div>
 
-        <h3>Back to the beginning: How good system design afforded discoveries</h3>
+        <h3>Back to the beginning: How good system design afforded discovery</h3>
         <p>Late 2019 we set out to create a new feature, which eventually became what was known as the WHOOP Journal. The purpose of the WHOOP Journal was to collect behavioral information, such as bedtime rituals, lifestyle choices (e.g. drinking alcohol), and various Recovery modalities to help members understand their impact to Sleep and Recovery data. Members had often cited wanting to understand what actually impacts their Recovery. The WHOOP Journal was the input mechanism to deliver this analysis.</p>
         <p>While designing the WHOOP Journal, the question of extensibility came to mind. What would members want to track? How many behaviors would members want to track? How might we react when members request certain behaviors not provided within the Journal. It’s worth noting that we made the decision to curate a library of behaviors instead of making the Journal completely customizable to allow for big data studies across the member base (e.g. common behaviors across members can be studied). This was key. User research helped us forecast the types of behaviors as well as the manner in which we could update the journal library on the fly. </p>
         <p>This architecture ending up coming in handy especially in March of 2020; we decided to add “COVID-19 Symptoms” as a journal behavior and made it accessible to all members. Sure enough members began reporting experiencing COVID-19 symptoms. We also leveraged a simple Typeform survey integration to gather additional data points such as COVID-19 test results, severity of symptoms, etc. This was critical for data science research.</p>
@@ -91,7 +91,9 @@
         <h3>Discovering a new experience</h3>
         <p>Armed with a significant set of biometric and behavioral data, the Data Science team was off looking for any and all insights. Did COVID-19 affect Sleep? How did COVID-19 affect cardiovascular health? Were certain demographic cohorts affected more than others? At first, the team wasn’t quite sure what to look for, but had a lot of data to explore.</p>
         <p>The results of their study were fascinating. In turns out that there was a strong correlation between a metric called Respiratory Rate and those who reported testing positive for COVID-19. Specifically, Respiratory Rate would spike days before the member would cite having COVID-19 Symptoms. This insight was profound because Respiratory Rate was a historically irrelevant metric; it never really fluctuated. We hadn’t really even displayed the metric in the mobile apps. Until now.</p>
-        <p>The first design challenge was figuring out how to build this metric into the product. While working with the Data Science team we learned that when someone’s Respiratory Rate deviates significantly from their historical baseline for several days in a row, there is a significant chance they had contracted COVID-19. However, this was not a diagnosis, so the product experience needed to help members monitor their Respiratory Rate instead of, for example, providing “COVID-19 Detection”.</p>
+        <p>The first design challenge was figuring out how to build this metric into the product. While working with the Data Science team we learned that when someone’s Respiratory Rate deviates significantly from their historical baseline for several days in a row, there is a significant chance they had contracted COVID-19. However, this was not an FDA-approved diagnosis tool, so the product experience needed to help members monitor their Respiratory Rate instead of, for example, providing “COVID-19 Detection”.</p>
+        <img class="feature" src="images/whoop/feature-respiratory-rate-concepts.png">
+        <p class="caption">Early "COVID-19 Detection" Concepts</p>
         <p>The design solution we landed on incorporated 3 key elements:</p>
         <ol>
           <li>Plotting daily Respiratory Rate values</li>
@@ -101,6 +103,9 @@
         <p>Fortunately these components existed within the product for other metrics, so we were able to quickly write the coaching logic, build the feature, and launch it.</p>
         <img class="feature" src="images/whoop/feature-rr.png">
         <p class="caption">A trend of Respiratory Rate values. Tapping displays value labels.</p>
+
+        <img class="feature" src="images/whoop/feature-vow.png">
+        <p class="caption">"Voice of WHOOP" coaching copy logic.</p>
 
         <h3>Finding early signal</h3>
         <p>After launching the Respiratory Rate trend, we found that members viewed this trend at a much higher frequency (per week) than other trends. This was a good first sign. During member interviews we also learned that checking the trend ended up becoming another key morning ritual. Members would wake up, check Sleep, check Recovery, check Respiratory Rate, and then start their day. Members commonly cited seeking COVID-19 testing when experiencing spikes in their Respiratory Rate. In a world where many product companies were looking to provide something of value during the height of the pandemic, here was our contribution!</p>
